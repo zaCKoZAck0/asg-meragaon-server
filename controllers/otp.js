@@ -1,8 +1,9 @@
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
+require('dotenv').config()
 
-const accountSid = "AC35f1b598ff9d5815ab30831c4c5311d0";
-const authToken = "d677e43d0fd460a6c7cfe53703b9e0b1";
+const accountSid = process.env.ACCOUNT_SID;
+const authToken = process.env.AUTH_TOKEN;
 
 
 const client = require("twilio")(accountSid, authToken);

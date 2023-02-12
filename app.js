@@ -13,6 +13,10 @@ origin: ['http://localhost:3000','http://localhost:8080', "https://asg-meragaon-
 app.use(cors(options));
 app.use(express.json({ limit: '10mb' }));
 
+app.get('/', (req,res)=>{
+    res.send("<H1>Hello</H1>")
+})
+
 // to getall, add, edit & delete contacts
 app.use("/api/contacts",contactsRoute);
 // to send OTP

@@ -1,10 +1,13 @@
 import app from './app.js';
-import { PORT, __dirname } from './globals.js';
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+require('dotenv').config()
+import { __dirname } from './globals.js';
 import http from 'http';
 import { createDB } from './utils/db.js';
 
 const server = http.createServer(app);
-
+const PORT = process.env.PORT
 
 
 
