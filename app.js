@@ -5,14 +5,19 @@ import otpRoute from './routes/otp.js';
 import messageRoute from './routes/messages.js'
 
 const app = express();
+
+//origins allowed
 const options = {
 origin: ['http://localhost:3000','http://localhost:8080', "https://asg-meragaon-client.vercel.app"],
 }
 app.use(cors(options));
 app.use(express.json({ limit: '10mb' }));
 
+// to getall, add, edit & delete contacts
 app.use("/api/contacts",contactsRoute);
+// to send OTP
 app.use("/api/otp",otpRoute);
+// to get all messages
 app.use("/api/messages",messageRoute);
 
 export default app;

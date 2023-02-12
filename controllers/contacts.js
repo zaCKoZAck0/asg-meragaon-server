@@ -4,6 +4,7 @@ import { validateField } from "../utils/validateJson.js";
 const db = createDB(__dirname)
 import crypto from 'crypto';
 
+
 export const getContacts =  async (req, res) => {
     try {
     await db.read();
