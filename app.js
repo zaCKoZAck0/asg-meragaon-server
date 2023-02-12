@@ -6,7 +6,7 @@ import messageRoute from './routes/messages.js'
 
 const app = express();
 const options = {
-origin: ['http://localhost:3000','http://localhost:8080'],
+origin: ['http://localhost:3000','http://localhost:8080', "https://asg-meragaon-client.vercel.app"],
 }
 app.use(cors(options));
 app.use(express.json({ limit: '10mb' }));
