@@ -20,7 +20,7 @@ export const sendOTP = (req, res) => {
     const contact = req.body.contact;
 
    client.messages
-  .create({ body: `Your OTP is, ${OTP}`, from: "+18144812166", to: `+91${phoneNumber}` })
+  .create({ body: `Your OTP is: ${OTP}`, from: "+18144812166", to: `+91${phoneNumber}` })
   .then(async message => {
     try {
     await db.read();
