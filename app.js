@@ -8,7 +8,7 @@ const app = express();
 
 //origins allowed
 const options = {
-origin: ['http://localhost:3000','http://localhost:8080', "https://asg-meragaon-client.vercel.app"],
+origin: ['http://localhost:3000','http://localhost:8080', "https://asg-meragaon-client.vercel.app", "https://asg-meragaon-client-zackozack0.vercel.app/", "https://asg-meragaon-client-git-master-zackozack0.vercel.app/"],
 }
 app.use(cors(options));
 app.use(express.json({ limit: '10mb' }));
